@@ -1,0 +1,24 @@
+/******************************************************************************
+
+Escreva um subprograma recursivo que receba como entrada o termo inicial e a
+razão de uma progressão aritmética e um número inteiro positivo N e calcule o
+enésimo termo da progressão.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int enesimo(int t1, int num, int r){
+   if(num==1){
+       return t1;
+   }
+   return enesimo(t1+r,num-1, r);
+}
+
+void main(){
+    int num, t1, r;
+    printf("Informe o termo inicial, a razao e um numero inteiro:");
+    scanf("%d%d%d", &t1, &r, &num);
+    int ene = enesimo(t1, num, r);
+    printf("%d", ene);
+}
