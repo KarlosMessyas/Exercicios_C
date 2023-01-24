@@ -1,0 +1,23 @@
+/******************************************************************************
+
+Escreva um subprograma recursivo que receba como entrada um número inteiro e
+calcule a sua quantidade de algarismos.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int quantidade(int num){
+    if(num>=1&&num<10){
+        return 1;
+    }
+    return 1 + quantidade(num/10);
+}
+
+void main(){
+    int num;
+    printf("Informe um numero inteiro:");
+    scanf("%d", &num);
+    int alg = quantidade(num);
+    printf("%d", alg);
+}
