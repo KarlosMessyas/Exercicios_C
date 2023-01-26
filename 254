@@ -1,0 +1,23 @@
+/******************************************************************************
+
+Escreva um subprograma recursivo que receba como entrada dois números inteiros x
+e y e calcule o valor do produto de x por y.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int produto(int x, int y){
+    if(y==1){
+        return x;
+    }
+    return x + produto(x,y-1);
+}
+
+void main(){
+    int x, y;
+    printf("Informe dois numeros inteiros:");
+    scanf("%d%d", &x, &y);
+    int resultado = produto(x,y);
+    printf("%d", resultado);
+}
